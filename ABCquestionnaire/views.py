@@ -52,13 +52,13 @@ def create_survey(request):
 					answers.choice13,answers.choice14,answers.choice15,answers.choice16,answers.choice17,
 				]
 				return redirect('/result')
-		text=datas[0]
-		if text is not None:
-			for answer in datas:
-				f=open('/Users/arsenios/Desktop/data.txt', 'a')
-				f.write(answer+",")
-			f.write("\n")
-			f.close()
+# 		text=datas[0]
+# 		if text is not None:
+# 			for answer in datas:
+# 				f=open('/Users/arsenios/Desktop/data.txt', 'a')
+# 				f.write(answer+",")
+# 			f.write("\n")
+# 			f.close()
 		return render(request,'ABCquestionnaire/result.html',{"datas":datas})
         
 
