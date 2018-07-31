@@ -147,7 +147,7 @@ class graphs:
         plt.yticks([])
         # plt.axis("equal")
         ax.axis('square')
-        plt.ylim(-0.35,1.10)
+        plt.ylim(-0.35,1.05)
         ax.spines['right'].set_visible(False)
         ax.spines['top'].set_visible(False)
         ax.spines['bottom'].set_visible(False)
