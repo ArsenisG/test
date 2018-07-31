@@ -38,28 +38,28 @@ def question_values(request):
 
 from django.core.files.base import ContentFile
 def create_survey(request):
-        # value=Value(user=request.user)
-		if request.method=='POST':
-			form=ValueForm(request.POST)
-			if form.is_valid():
-				# request.session['Q1'] = request.POST.get('choice1')                
-				answers=form.save(commit=False)
-				# answers.user=request.user
-				# answers.save()
-				global datas
-				datas=[answers.choice1,answers.choice2,answers.choice3,answers.choice4,answers.choice5,answers.choice6,
-					answers.choice7,answers.choice8,answers.choice9,answers.choice10,answers.choice11,answers.choice12,
-					answers.choice13,answers.choice14,answers.choice15,answers.choice16,answers.choice17,
-				]
-				return render(request,'ABCquestionnaire/result.html',{"datas":datas})				
-# 		text=datas[0]
-# 		if text is not None:
-# 			for answer in datas:
-# 				f=open('/Users/arsenios/Desktop/data.txt', 'a')
-# 				f.write(answer+",")
-# 			f.write("\n")
-# 			f.close()		
-        	return redirect('/result')
+    global datas
+    # value=Value(user=request.user)
+    if request.method=='POST':
+        form=ValueForm(request.POST)
+        if form.is_valid():
+            # request.session['Q1'] = request.POST.get('choice1')                
+            answers=form.save(commit=False)
+            # answers.user=request.user
+            # answers.save()
+            datas=[answers.choice1,answers.choice2,answers.choice3,answers.choice4,answers.choice5,answers.choice6,
+                answers.choice7,answers.choice8,answers.choice9,answers.choice10,answers.choice11,answers.choice12,
+                answers.choice13,answers.choice14,answers.choice15,answers.choice16,answers.choice17,
+            ]
+            return redirect('/result')
+    # text=datas[0]
+    # if text is not None:
+    # 	for answer in datas:
+    # 		f=open('/Users/arsenios/Desktop/data.txt', 'a')
+    # 		f.write(answer+",")
+    # 	f.write("\n")
+    # 	f.close()
+    return render(request,'ABCquestionnaire/result.html',{"datas":datas})
 
 def submitted_info(request):
     if 'count' not in request.session:
