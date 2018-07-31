@@ -51,16 +51,15 @@ def create_survey(request):
 					answers.choice7,answers.choice8,answers.choice9,answers.choice10,answers.choice11,answers.choice12,
 					answers.choice13,answers.choice14,answers.choice15,answers.choice16,answers.choice17,
 				]
-				return redirect('/result')
+				return render(request,'ABCquestionnaire/result.html',{"datas":datas})				
 # 		text=datas[0]
 # 		if text is not None:
 # 			for answer in datas:
 # 				f=open('/Users/arsenios/Desktop/data.txt', 'a')
 # 				f.write(answer+",")
 # 			f.write("\n")
-# 			f.close()
-		return render(request,'ABCquestionnaire/result.html',{"datas":datas})
-        
+# 			f.close()		
+        	return redirect('/result')
 
 def submitted_info(request):
     if 'count' not in request.session:
