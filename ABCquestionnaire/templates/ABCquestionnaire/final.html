@@ -1,0 +1,104 @@
+
+<div class="col-md-6" align="center">
+  <h2>Academic Behavioural Confidence</h2>
+</div>
+<!-- <style>
+.parent {
+  class:"col-md-8 col-md-push-2";
+}
+.parent > ul {
+  display: inline-block;
+}
+</style> -->
+<style type="text/css">
+.position{text-align:center;}
+.position ul{
+  display:inline-block;
+  text-align:left;
+}
+<!-- table, th, td { -->
+  <!-- border: 1px solid black; -->
+<!-- } -->
+.my_table table{
+  border: 1px solid black;
+}
+.my_table th{
+  border: 1px solid black;
+}
+.my_table td{
+  border: 1px solid black;
+  text align:"center";
+}
+</style>
+<div class="position">
+  <ul>
+    <li>The 17 questions you filled in were intended to try and describe dimensions of Academic
+      Behavioural Confidence (ABC)<br>(related to the self-concept and self-efficacy of students)
+    </li>
+    <li>The identified four dimensions of ABC, are: <br>
+	  </li>
+      <ul>
+      <li>Grades-Grd ("Confidence in the actual activity contributing directly to what a student is graded on, including coursework and exams")</li> 
+      <li>Verbalising-Vrb ("Confidence in the ability to verbalise their knowledge during their learning activity")</li> 
+      <li>Attendance-Att ("Confidence in the willingness to appropriately attend events during their learning activity")</li> 
+      <li>Studying-Std ("Confidence in undertaking the self-orginised activity necessary for their learning experience")</li>
+      </ul>
+    <li>The results of your 17 responses are shown in the below constellation graph plot 
+      (different number of the questions relate<br>to the different dimensions)
+      (each line of points joins the responses from different sets of questions).
+    </li>
+  </ul>
+</div>
+<table align="right" style="width:100%;height:23em">
+<!-- <div align="center" style="width:100%;height:23em"> -->
+  <tr>
+  <!-- {% autoescape off %} -->
+    <td width="30%"></td>
+    <td align ="center" width="40%">{{ svg5 }}</td>
+  <!-- {% endautoescape %} -->
+    <td>
+      <div class="my_table">
+        <table align="left" style="width:40%;">
+          <tr>
+            <td align ="center">{{Xfinal.0.0}}</td>
+            <td align ="center">{{Xfinal.0.1}}</td>
+          </tr>
+          <tr>
+            <td align ="center">{{Xfinal.1.0}}</td>
+            <td align ="center">{{Xfinal.1.1}}</td>
+          </tr>
+          <tr>
+            <td align ="center">{{Xfinal.2.0}}</td>
+            <td align ="center">{{Xfinal.2.1}}</td>
+          </tr>
+          <tr>
+            <td align ="center">{{Xfinal.3.0}}</td>
+            <td align ="center">{{Xfinal.3.1}}</td>
+          </tr>
+          <tr>
+            <th>ABC</th>
+            <th>{{ABCX}}</th>
+          </tr>
+        </table>
+      </div>
+    </td>
+  </tr>
+</table>
+<!-- </div>  -->
+<div class="position">
+  <ul>
+    <li>The base line of the constellation graph shows the index values of different confidence dimensions, 
+      over the consistent domain 0.0<br>(low confidence) to 1.0 (high confidence).
+    </li>
+    <li>Have a look at your results and think whether they are a fair reflection of your confidences in these regards.
+    </li>
+    <li>You may want to talk to your personal tutor about these results - or ask your undergraduate office for where further advice<br>could be sought.
+    </li>
+  </ul>  
+</div>
+<div align="center">
+  <a href="/download" download>
+    <button>Download as PDF</button>
+    <!-- <a class="btn btn-primary pull-right" href="/download" role="button">Next</a> -->
+  </a> 
+</div>
